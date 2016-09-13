@@ -17,16 +17,23 @@ var compressor;
 var canvas;
 var ctx;
 
+var oscOptions;
+
 var analyser;
 
 
 var leapController;
 var handPositionExport =[];
+var oscOptions; 
 
 
 window.addEventListener('load', init, false);
 
 function init() {
+
+  oscOptions= document.getElementById("oscOptions");
+  console.log(oscOptions);
+
 
   canvas = document.getElementById('visualizer');
   ctx = canvas.getContext('2d');
@@ -50,7 +57,7 @@ freqDisplay2 = document.getElementById("freq-display2");
 
 oscillator = audioContext.createOscillator();
 oscGain = audioContext.createGain();
-oscillator.type = 'sawtooth';
+oscillator.type = 'sine';
 oscGain.gain.value = 0.5;
 oscillator.frequency.value = 8000;
 
