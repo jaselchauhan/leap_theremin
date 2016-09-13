@@ -1,9 +1,53 @@
+body{
+  background-image: url("../img/pic1.jpg");
+  background-size:cover;
+  font-family: 'Share Tech Mono', Mono ;
+  text-align: center;
+  position: relative;
+}
+
+body > h1 {
+  text-align:center;
+  font-weight: bold;
+  background-color: rgba(100, 239, 170, 0.5);
+  border: 2px solid black;
+  width:100%;
+  color:rgba(0,0,0,.8);
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 canvas {
   background-color: black;
   padding-left: 5px;
   padding-right: 5px;
-  width:600px;
-  height:200px;
+  width:900px;
+  height:300px;
   margin: 0 auto;
   display: block;
+}
+
+.buttons-wrapper{
+  margin-bottom: 15px;
+}
+
+.co-ords{
+  width:900px;
+  margin: 20px auto;
+  height:40px;
+}
+
+.co-ords li{
+  list-style-type:none;
+  display: inline;
+  font-weight: bold;
+  font-size:20px;
+}
+
+.co-ords li span{
+  font-size: 28px;
+  font-weight: bold;
+  background-color: rgba(100, 239, 170, 0.5);
+  border: 2px solid black;
 }

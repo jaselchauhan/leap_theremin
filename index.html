@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Leap Theremin</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
     <script src="js/leap.js"></script>
     <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
@@ -13,21 +14,20 @@
     <script src="js/angular/controller.js"></script>
   </head>
   <body ng-controller="PrimaryController">
-    <h1>Leap Theremin</h1>
-
-    <canvas id="visualizer"></canvas>
-
-    <p>total count is at: {{total}}</p>
-
-    <p>x-co-ordinate : {{xPos}}</p>
-    <p>y-co-ordinate : {{yPos}}</p>
-    <p>z-co-ordinate : {{zPos}}</p>
+    <h1>LEAP MOTION THEREMIN</h1>
 
     <div class="buttons-wrapper">
       <button id="button-play-gum" class="button-demo" href="#">Begin</button>
       <button id="button-stop-gum" class="button-demo" href="#">Pause</button>
     </div>
-    <br><br>
+
+    <canvas id="visualizer"></canvas>
+
+    <ul class="co-ords">
+      <li>x: <span>{{xPos}}</span></li>
+      <li>y: <span>{{yPos}}</span></li>
+      <li>z: <span>{{zPos}}</span></li>
+    </ul>
 
     <select id="oscOptions" size="4">
       <option id="sine" value="sine">Sine</option>
@@ -38,7 +38,7 @@
 
     <p>tweaks: 
       <ul>
-      
+      <li>change start and stop buttons to keyboard events</li>
       <li>add in ability to change views with a different canvas on each view</li>
       <li>add option to choose different sounding oscillators. find out how to use to select tag properly - want to select from page and have osc change.</li>
       <li>add in option to login and save your composition</li>
