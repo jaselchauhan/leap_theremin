@@ -48,22 +48,6 @@ freqDisplay = document.getElementById("freq-display");
 slider2 = document.getElementById("slider2");
 freqDisplay2 = document.getElementById("freq-display2");
 
-// var videoStream = null;
-// var video = document.getElementById("video");
-
-// slider interaction
-if(slider.addEventListener){
-  slider.addEventListener("change",onChange);
-} else {
-  slider.attachEvent("onchange",onChange);
-}
-
-if(slider2.addEventListener){
-  slider2.addEventListener("change",onChange2);
-} else {
-  slider2.attachEvent("onchange",onChange2);
-}
-
 oscillator = audioContext.createOscillator();
 oscGain = audioContext.createGain();
 oscillator.type = 'sawtooth';
@@ -144,7 +128,6 @@ compressor = audioContext.createDynamicsCompressor();
     animateVisualizer();
      
     
-
    })
 
 

@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="LeapTheremin">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Leap Theremin</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/leap.js"></script>
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script src="js/angular/app.js"></script>
+    <script src="js/angular/controller.js"></script>
   </head>
-  <body>
+  <body ng-controller="PrimaryController">
     <h1>Leap Theremin</h1>
 
     <canvas id="visualizer"></canvas>
-    
+
+    <p>total count is at: {{total}}</p>
+
+    <p>x-co-ordinate : {{xPos}}</p>
+    <p>y-co-ordinate : {{yPos}}</p>
+    <p>z-co-ordinate : {{zPos}}</p>
 
     <div class="buttons-wrapper">
-      <button id="button-play-gum" class="button-demo" href="#">Play demo</button>
-      <button id="button-stop-gum" class="button-demo" href="#">Stop demo</button>
+      <button id="button-play-gum" class="button-demo" href="#">Begin</button>
+      <button id="button-stop-gum" class="button-demo" href="#">Pause</button>
     </div>
     <br><br>
 
-    <div id="audio_box"></div>
+    <p>tweaks: 
+      <ul>
+      <li>display x y and z cords on screen.</li>
+      <li>angular front end so can update screen without refresh. will need testing</li>
+      <li>add option to choose different sounding oscillators</li>
+      <li>add in option to login and save your composition</li>
+      <li>hone the effects more to create a better sound.</li>
+      </ul>
+    </p>
 
-    <video id="video" autoplay="autoplay" controls="true"></video>
-
-    <input type="range" id="slider" min="100" max="12000" value="100">
-    <label for="#slider">slide to change frequency of oscillator</label>
-    <div id="freq-display">100</div>
-
-    <input type="range" id="slider2" min="100" max="22200" value="100">
-    <label for="#slider2">highpass</label>
-    <div id="freq-display2">100</div>
-
-    <span id="gum-unsupported" class="hidden">API not supported</span>
-    <span id="gum-partially-supported" class="hidden">API partially supported (video only)</span>
     
     <script src="js/leap-custom.js"></script>
     <script src="js/app.js">

@@ -1,3 +1,4 @@
+
 leapController = Leap.loop({enableGestures:true}, function(frame){
 
                         var handsLength = frame.hands.length;
@@ -13,9 +14,10 @@ leapController = Leap.loop({enableGestures:true}, function(frame){
 
                             // console.log(hand.type, hand.palmPosition);}
 
-                            var xPos = hand.palmPosition[0];
-                            var yPos = hand.palmPosition[1];
-                            var zPos = hand.palmPosition[2];
+                            //these are available to other files becuase on global scope
+                            xPos = hand.palmPosition[0];
+                            yPos = hand.palmPosition[1];
+                            zPos = hand.palmPosition[2];
 
                             // console.log(xPos);
 
@@ -27,7 +29,6 @@ leapController = Leap.loop({enableGestures:true}, function(frame){
 
 
                 });
-
 
 //set up for a theremin
 //right hand y axis for gain, left hand x-axis for frequency
