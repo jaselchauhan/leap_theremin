@@ -22,6 +22,10 @@ audio.loop = true;
 audio.autoplay = false;
 audio.volume = 0.1;
 
+var leapController;
+var handPositionExport =[];
+
+
 window.addEventListener('load', init, false);
 
 function init() {
@@ -58,15 +62,32 @@ if(slider2.addEventListener){
 }
 
 
+oscillator = audioContext.createOscillator();
+oscillator.type = 'sawtooth';
+
+
+
+
+
  document.getElementById('button-play-gum').addEventListener('click', function() {
- 
-     oscillator = audioContext.createOscillator();
+
+
+  setInterval(function(){ console.log(handPositionExport[0]); }, 1000);  
+
+      // var negative = -23, 
+      // positive = -negative>0 ? -negative : negative;
+
+     
      source = audioContext.createMediaElementSource(audio); 
 
      merger = audioContext.createChannelMerger(2);
 
-     oscillator.type = 'sawtooth';
-     oscillator.frequency.value = 8000; // value in hertz
+
+     setInterval(function(){
+        oscillator.frequency.value = Math.abs(handPositionExport[0]);
+      },100)
+
+     
 
      gainNode= audioContext.createGain();
      gainNode.gain.value = 0.8;
@@ -124,13 +145,4 @@ function onChange2(){
 
 
 }
-
-
-
-
-
-
-//need to add visualizer
-// want to add a triangle wave oscillator and add the 2 waves together
-
 
