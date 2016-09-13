@@ -1,4 +1,9 @@
 # leap_theremin
-theremin developed using javascript and leap motion controller
+
+A basic theremin developed for use with the leap motion controller.
+
+Coded in vanilla JavaScript using an Angular JS front end. Currently in MVP stage
+
+
 
 
