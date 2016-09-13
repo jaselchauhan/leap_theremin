@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>getUserMedia Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="leap.js"></script>
+  </head>
+  <body>
+    <h1>getUserMedia API</h1>
+    
+
+    <div class="buttons-wrapper">
+      <button id="button-play-gum" class="button-demo" href="#">Play demo</button>
+      <button id="button-stop-gum" class="button-demo" href="#">Stop demo</button>
+    </div>
+    <br><br>
+
+    <div id="audio_box"></div>
+
+    <video id="video" autoplay="autoplay" controls="true"></video>
+
+    <input type="range" id="slider" min="100" max="12000" value="100">
+    <label for="#slider">slide to change frequency of oscillator</label>
+    <div id="freq-display">100</div>
+
+    <input type="range" id="slider2" min="100" max="22200" value="100">
+    <label for="#slider2">highpass</label>
+    <div id="freq-display2">100</div>
+
+    <span id="gum-unsupported" class="hidden">API not supported</span>
+    <span id="gum-partially-supported" class="hidden">API partially supported (video only)</span>
+
+    <script src="js/app.js">
+      
+    </script>
+  </body>
+</html>
