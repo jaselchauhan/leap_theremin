@@ -28,10 +28,6 @@ canvas {
   display: block;
 }
 
-.buttons-wrapper{
-  margin-bottom: 15px;
-}
-
 .co-ords{
   width:900px;
   margin: 20px auto;

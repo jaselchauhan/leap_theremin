@@ -16,17 +16,15 @@
   <body ng-controller="PrimaryController">
     <h1>LEAP MOTION THEREMIN</h1>
 
-    <div class="buttons-wrapper">
-      <button id="button-play-gum" class="button-demo" href="#">Begin</button>
-      <button id="button-stop-gum" class="button-demo" href="#">Pause</button>
-    </div>
-
     <canvas id="visualizer"></canvas>
 
     <ul class="co-ords">
       <li>x: <span>{{xPos}}</span></li>
       <li>y: <span>{{yPos}}</span></li>
       <li>z: <span>{{zPos}}</span></li>
+      <li>thumb: <span>{{thumbPos}}</span></li>
+      <li>index: <span>{{indexPos}}</span></li>
+      
     </ul>
 
     <select id="oscOptions" size="4">
@@ -38,11 +36,12 @@
 
     <p>tweaks: 
       <ul>
-      <li>change start and stop buttons to keyboard events</li>
       <li>add in ability to change views with a different canvas on each view</li>
       <li>add option to choose different sounding oscillators. find out how to use to select tag properly - want to select from page and have osc change.</li>
       <li>add in option to login and save your composition</li>
       <li>hone the effects more to create a better sound.</li>
+      <li>feature to take current sound and move to to a loop with hand gesture . then you can create new sounds over it with your hand again</li>
+      <li>use another motion (left hand?) to select different oscillators/ bring up a user display where you can change settings. use css animations to make interactive</li>
       </ul>
     </p>
 
