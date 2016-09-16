@@ -18,8 +18,12 @@ window.addEventListener('load', init, false);
     var analyser;
     var leapController;
     var audioContext;
+    var redChannel;
+    var greenChannel;
+    var background;
     
     oscOptions= document.getElementById("oscOptions");
+    background= document.getElementById("background")
 
     canvas = document.getElementById('visualizer');
     ctx = canvas.getContext('2d');
@@ -57,7 +61,7 @@ window.addEventListener('load', init, false);
 //every 100ms run setInterval to check if hand is detected and is open then run openHand function, else (if closed) run closeHand function
 
 
-setInterval(function(){
+setInterval(function(){ 
 
   if(handExport.grabStrength < 0.8){
     openHand();
@@ -70,10 +74,11 @@ setInterval(function(){
       closeHand();
   }
 
-},500)
+},200)
 
   function openHand(){
     setInterval(function(){
+
       oscillator.frequency.value = Math.abs(handExport.palmPosition[0]*25);
       oscGain.gain.value = handExport.palmPosition[1]/500;//DO NOT CHANGE DIVISION FACTOR TO BELOW 300
       delay.delayTime.value = Math.abs(handExport.palmPosition[2]/500);
@@ -94,7 +99,7 @@ setInterval(function(){
 
   function closeHand(){
       analyser.disconnect();
-      // oscillator.stop();
+      oscillator.stop();
       oscillator = audioContext.createOscillator();
   }
 

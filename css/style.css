@@ -1,6 +1,7 @@
 body{
-  background-image: url("../img/pic1.jpg");
+ /* background-image: url("../img/pic1.jpg");*/
   background-size:cover;
+  background-color: rgb(0,0,0);
   font-family: 'Share Tech Mono', Mono ;
   text-align: center;
   position: relative;

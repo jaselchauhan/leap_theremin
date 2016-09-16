@@ -13,7 +13,7 @@
     <script src="js/angular/app.js"></script>
     <script src="js/angular/controller.js"></script>
   </head>
-  <body ng-controller="PrimaryController">
+  <body ng-controller="PrimaryController" id="background">
     <h1>LEAP MOTION THEREMIN</h1>
 
     <canvas id="visualizer"></canvas>
@@ -26,13 +26,6 @@
       <li>index: <span>{{indexPos}}</span></li>
       
     </ul>
-
-    <select id="oscOptions" size="4">
-      <option id="sine" value="sine">Sine</option>
-      <option id="square" value="square">Square</option>
-      <option id="triangle" value="triangle">Triangle</option>
-      <option id="sawtooth" value="sawtooth">Sawtooth</option>
-    </select>
 
     <p>tweaks: 
       <ul>

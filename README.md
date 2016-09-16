@@ -12,9 +12,9 @@ The leap motion controller measures your hand's x, y and z co-ordinates. The ini
 * Ensure leap motion controller is connected to computer
 * Clone this repo to your local storage
 * Start an instance of localhost in root of cloned repo and go to browser
-* Press the begin button to start the oscillator
+* Guide your hand over the leap motion to begin.
 * Guide your hand over the leap motion controller to mould the sound
-* Press pause button to stop the oscillator
+* To pause sound make a fist with your hand.
 
 ###Technologies Used:
 
