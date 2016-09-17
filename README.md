@@ -5,7 +5,7 @@
 ![Alt text](/img/profile.png)
 
 ###How does it work?:
-The leap motion controller measures your hand's x, y and z co-ordinates. The initial oscillated note has been run through a series of audio processors. Specifically, movement change on the x-axis changes the frequency of the note, y-axis adjusts the gain and z-axis adjusts the delay.
+The leap motion controller measures your hand's x, y and z co-ordinates. The initial oscillated note has been run through a series of audio processors. Specifically, movement change on the x-axis changes the frequency of the note, y-axis adjusts the gain and z-axis adjusts the delay. The frequency response of the sound is also relayed to a canvas to create a visualiser.
 
 ###Instructions:
   
