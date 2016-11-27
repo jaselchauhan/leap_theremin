@@ -28,6 +28,4 @@ The leap motion controller measures your hand's x, y and z co-ordinates. The ini
 Please note that this is an MVP designed primarily to test the leap motion controller and experiment around with the awesome API that is Web Audio!
 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=2AfzzZpq57o
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/2AfzzZpq57o/0.jpg)](http://www.youtube.com/watch?v=2AfzzZpq57o)
